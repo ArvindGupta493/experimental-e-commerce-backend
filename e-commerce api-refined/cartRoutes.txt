@@ -1,0 +1,56 @@
+// // user route he with  cart routes
+
+
+// var express = require('express');
+// var router = express.Router();
+
+// const userMiddlewares = require('../middlewares/userMiddlewares');
+
+// const userController = require('../app/controllers/userController');
+// const verifyUserLogin = userMiddlewares.verifyUserLogin;
+
+
+// /*=================================================USER ROUTES=================================================*/
+
+// /* ========================USER LOGIN / LOGOUT ROUTES======================== */
+
+// router.get('/login', userController.userLogInGET);
+// router.post('/login', userController.userLogInPOST);
+// router.post('/logout', verifyUserLogin, userController.userLogOutPOST);
+
+
+// /* ========================USER SIGN-UP ROUTES======================== */
+
+// router.get('/signup', userController.userSignUpGET);
+// router.post('/signup', userController.userSignUpPOST);
+
+// /* ========================USER FORGOT PASSWORD ROUTES======================== */
+
+// router.get('/forgot-password', userController.forgotPasswordGET);
+// router.post('/forgot-password', userController.verifyAccountForPasswordResetPOST);
+// router.post('/set-new-password', userController.resetUserPasswordPOST);
+
+// /* ========================USER PROFILE ROUTES======================== */
+
+// router.get('/profile/:userName', verifyUserLogin, userController.userProfileGET);
+// router.post('/update-my-profile', verifyUserLogin, userController.userProfileUpdateRequestPOST);
+
+
+// /* ========================CART ROUTES======================== */
+
+// router.get('/cart', verifyUserLogin, userController.cartGET);
+// router.get('/empty-cart', verifyUserLogin, userController.emptyCartGET);
+// router.get('/add-to-cart/:id', verifyUserLogin, userController.addToCartGET);
+// router.post('/change-product-quantity', verifyUserLogin, userController.changeCartProductQuantityPOST);
+// router.post('/delete-product-from-cart', verifyUserLogin, userController.deleteCartProductPOST);
+
+// /* ========================ORDERS ROUTES======================== */
+
+// router.get('/orders',verifyUserLogin, userController.userOrdersGET);
+// router.post('/ordered-product-details',verifyUserLogin, userController.userOrderDetailsPOST);
+// router.get('/place-order',verifyUserLogin, userController.placeOrderGET);
+// router.post('/place-order',verifyUserLogin, userController.placeOrderPOST)
+// router.get('/order-success',verifyUserLogin, userController.orderSuccessGET);
+// router.get('/order-failed',verifyUserLogin, userController.orderFailedGET);
+
+// module.exports = router;
